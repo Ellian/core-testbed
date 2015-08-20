@@ -4,15 +4,16 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
+ // Reference: https://gist.github.com/saddieeiddas/619e7f78114c7b855c00
+
  module.exports = {
   type: 'component',
+  engine: "ts",
   path: __dirname,
+  name: 'main',
   glob: {
       js: [ 'src/*.js', 'src/*.jsx', 'src/js/**/*.js', 'src/js/**/*.jsx' ],
       ts: [ 'src/*.ts', 'src/*.tsx', 'src/ts/**/*.ts', 'src/ts/**/*.tsx' ],
       stylus: [ 'src/*.styl', 'src/style/**/*.styl' ]
-  },
-  file: {
-      main: 'main.js'
   }
 };

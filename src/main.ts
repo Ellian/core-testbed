@@ -1,3 +1,4 @@
-/// <reference path="definitions/main.d.ts" />
-import core = require('cu-core');
+/// <reference path="definitions/tsd.d.ts" />
+import {race} from 'cu-core';
+
 debugger;
