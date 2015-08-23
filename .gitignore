@@ -10,3 +10,4 @@ npm-debug.log
 /publish
 /.vs
 main.csproj
+*.csproj
