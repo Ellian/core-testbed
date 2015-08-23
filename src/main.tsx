@@ -3,7 +3,6 @@ import * as React from 'react';
 import * as Reflux from 'reflux';
 import * as cuAPI from 'cu-fake-api';
 import events from 'cu-events';
-
 import stores from 'cu-stores';
 import components from 'cu-components';
 
@@ -32,15 +31,12 @@ const Character = React.createClass({
 	// Render the unit frame using character data
 	render: function() {
 		var state = this.state, character = state.character;
-		return (<div>{JSON.stringify(this.state)}</div>);
-		/*
 		return (<UnitFrame
 				className="character"
 				name={character.name} race={character.race}
 				health={character.health} maxHealth={character.maxHealth}
 				stamina={character.stamina} maxStamina={character.maxStamina} />
 			);
-*/
 	}
 });
 
