@@ -3,24 +3,22 @@ import * as React from 'react';
 import * as Reflux from 'reflux';
 import * as cuAPI from 'cu-fake-api';
 import events from 'cu-events';
-import stores from 'cu-stores';
-import components from 'cu-components';
+import { CharacterStore } from 'cu-stores';
+import { UnitFrame } from 'cu-components';
 
-const UnitFrame = components.UnitFrame;
-
-const CharacterStore = stores.CharacterStore.create();
+const characterStore = CharacterStore.create();
 
 const Character = React.createClass({
 
 	// Hook store up to component.  Each time character data is changed,
 	// our state is updated, triggering a render
 	mixins: [
-		Reflux.connect(CharacterStore, 'character')
+		Reflux.connect(characterStore, 'character')
 	],
 
 	// Provide an initial state (TODO: is there a better way to do this?)
 	getInitialState: function() {
-		return { character: CharacterStore.info };
+		return { character: characterStore.info };
 	},
 
 	componentDidMount() {
