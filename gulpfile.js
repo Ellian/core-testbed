@@ -15,15 +15,21 @@ buildTools.auto(gulp, buildConfig);
 
 gulp.task('copy-images', function () {
   console.log('copy images');
-  gulp.src('node_modules/cu-components/lib/classes/unitframe/images/*')
+  gulp.src([ 
+      'node_modules/cu-components/lib/classes/unitframe/**/*.png', 
+      'node_modules/cu-components/lib/classes/unitframe/**/*.jpg'
+    ])
     .pipe(debug({ title: 'source:' }))
-    .pipe(gulp.dest('dist/lib/cu-components/unitframe/images'))
+    .pipe(gulp.dest('dist/lib/cu-components/unitframe'))
     .pipe(debug({ title: 'output:' }));
 });
 
 gulp.task('copy-css', function () {
   console.log('copy css');
-  gulp.src('node_modules/cu-components/lib/classes/unitframe.css')
+  gulp.src([
+      'node_modules/cu-components/lib/classes/UnitFrame.css',
+      'node_modules/cu-components/lib/classes/UnitFrame-character.css'
+    ])
     .pipe(debug({ title: 'source:' }))
     .pipe(gulp.dest('dist/lib/cu-components'))
     .pipe(debug({ title: 'output:' }));
