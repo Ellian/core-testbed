@@ -20,7 +20,7 @@ gulp.task('copy-images', function () {
       'node_modules/cu-components/lib/classes/unitframe/**/*.jpg'
     ])
     .pipe(debug({ title: 'source:' }))
-    .pipe(gulp.dest('dist/lib/cu-components/unitframe'))
+    .pipe(gulp.dest('dist/lib/cu-components/classes/unitframe'))
     .pipe(debug({ title: 'output:' }));
 });
 
@@ -31,7 +31,7 @@ gulp.task('copy-css', function () {
       'node_modules/cu-components/lib/classes/UnitFrame-character.css'
     ])
     .pipe(debug({ title: 'source:' }))
-    .pipe(gulp.dest('dist/lib/cu-components'))
+    .pipe(gulp.dest('dist/lib/cu-components/classes'))
     .pipe(debug({ title: 'output:' }));
 });
 
