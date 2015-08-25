@@ -17,7 +17,7 @@ gulp.task('copy-images', function () {
   console.log('copy images');
   gulp.src('node_modules/cu-components/lib/classes/unitframe/images/*')
     .pipe(debug({ title: 'source:' }))
-    .pipe(gulp.dest('dist/cu-components/unitframe/images'))
+    .pipe(gulp.dest('dist/lib/cu-components/unitframe/images'))
     .pipe(debug({ title: 'output:' }));
 });
 
@@ -25,7 +25,7 @@ gulp.task('copy-css', function () {
   console.log('copy css');
   gulp.src('node_modules/cu-components/lib/classes/unitframe.css')
     .pipe(debug({ title: 'source:' }))
-    .pipe(gulp.dest('dist/cu-components'))
+    .pipe(gulp.dest('dist/lib/cu-components'))
     .pipe(debug({ title: 'output:' }));
 });
 
@@ -33,7 +33,7 @@ gulp.task('copy-html', function () {
   console.log('copy css');
   gulp.src('src/**.html')
     .pipe(debug({ title: 'source:' }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/testbed'))
     .pipe(debug({ title: 'output:' }));
 });
 
